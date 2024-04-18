@@ -113,15 +113,12 @@ const changeNickname = () => {
       <div class="modal-wrapper">
         <div class="modal-container">
           <div class="modal-header">
-            <h3>원하는 작업을 선택하세요</h3>
+            <h3 class="modal-title">원하는 작업을 선택하세요</h3>
             <button class="modal-close-btn" @click="closeModal">X</button>
           </div>
           <div class="modal-body">
             <button @click="changePassword" class="modal-btn">비밀번호 재설정</button>
             <button @click="changeNickname" class="modal-btn">닉네임 변경</button>
-          </div>
-          <div class="modal-footer">
-            <button @click="closeModal">취소</button>
           </div>
         </div>
       </div>
@@ -143,7 +140,11 @@ const changeNickname = () => {
 .left-content div {
   margin-bottom: 10px; /* 각 요소 사이의 간격 조정 */
 }
-
+.modal-title {
+  margin-left:8dvw;
+  font-weight: bold;
+  text-align:center;
+}
 
 .modal-mask {
   position: fixed;
@@ -167,7 +168,7 @@ const changeNickname = () => {
 
 .modal-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between ;
   align-items: center;
   margin-bottom: 10px;
 }
@@ -179,25 +180,17 @@ const changeNickname = () => {
 }
 
 .modal-body {
+  display: flex;
+  justify-content: space-evenly;
   margin-bottom: 10px;
 }
 
-.modal-footer {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.modal-footer button {
-  margin-left: 10px;
-}
-
-
 .modal-btn {
-  padding: 10px 20px;
-  margin-left: 10px;
+  padding: 10px 10px;
+  margin: 1dvw;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: #498C74;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
